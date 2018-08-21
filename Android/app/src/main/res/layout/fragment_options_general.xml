@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_normal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_strike_blue"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_normal">
+
+        <CheckBox
+            android:id="@+id/chk_option0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option0"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option1"
+            android:textSize="@dimen/textsize_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:text="@string/option2"
+                android:textColor="@color/grey" />
+
+            <Spinner
+                android:id="@+id/spn_preset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chk_option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option3"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option4"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option5"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option6"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option7"
+            android:textSize="@dimen/textsize_normal" />
+
+        <CheckBox
+            android:id="@+id/chk_option8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/bg_chk_blue"
+            android:text="@string/option8"
+            android:textSize="@dimen/textsize_normal" />
+
+    </LinearLayout>
+</LinearLayout>

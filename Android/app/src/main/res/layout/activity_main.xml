@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_repeat"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_weight="1.2"
+        android:background="@drawable/panel_back"
+        android:padding="@dimen/margin_large">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_server"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_broadcast"
+                android:drawablePadding="@dimen/margin_large"
+                android:gravity="center_vertical"
+                android:text="ECHO SERVER"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textsize_really_large"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="@dimen/image_more_small"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:gravity="right"
+                    android:text="@string/OUT"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textsize_extra_small" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/prog_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/horizontal_prog_front_height"
+                        android:contentDescription="@string/app_name"
+                        android:layerType="software"
+                        android:src="@drawable/panel_dash_back" />
+
+                    <ImageView
+                        android:id="@+id/prog_out"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/horizontal_prog_front_height"
+                        android:contentDescription="@string/app_name"
+                        android:layerType="software"
+                        android:src="@drawable/panel_dash_front" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_panel_tick" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="@dimen/image_more_small"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:gravity="right"
+                    android:text="@string/IN"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/textsize_extra_small" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/horizontal_prog_front_height"
+                        android:contentDescription="@string/app_name"
+                        android:layerType="software"
+                        android:src="@drawable/panel_dash_back" />
+
+                    <ImageView
+                        android:id="@+id/prog_in"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/horizontal_prog_front_height"
+                        android:contentDescription="@string/app_name"
+                        android:layerType="software"
+                        android:src="@drawable/panel_dash_front" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_status"
+            android:layout_width="@dimen/image_very_small"
+            android:layout_height="@dimen/image_very_small"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/panel_dot_grey" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jaygoo.widget.VerticalRangeSeekBar
+                android:id="@+id/rsb_left"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:rsb_indicator_arrow_size="6dp"
+                app:rsb_indicator_background_color="@color/grey"
+                app:rsb_indicator_height="30dp"
+                app:rsb_indicator_margin="8dp"
+                app:rsb_indicator_radius="4dp"
+                app:rsb_indicator_show_mode="alwaysShow"
+                app:rsb_indicator_width="60dp"
+                app:rsb_max="20"
+                app:rsb_min="-20"
+                app:rsb_mode="single"
+                app:rsb_orientation="left"
+                app:rsb_progress_color="@android:color/black"
+                app:rsb_progress_default_color="@android:color/black"
+                app:rsb_progress_height="@dimen/vertical_progress_height"
+                app:rsb_progress_radius="@dimen/vertical_progress_radius"
+                app:rsb_thumb_drawable="@drawable/thumb"
+                app:rsb_thumb_scale_ratio="1.2"
+                app:rsb_thumb_size="@dimen/vertical_thumb_size"
+                app:rsb_tick_mark_gravity="center"
+                app:rsb_tick_mark_mode="other"
+                app:rsb_tick_mark_text_array="@array/indicator_array_left"
+                app:rsb_tick_mark_text_color="@android:color/background_light"
+                app:rsb_tick_mark_text_margin="16dp"
+                app:rsb_tick_mark_text_size="12dp" />
+
+            <ImageView
+                android:id="@+id/img_headphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_headphone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jaygoo.widget.VerticalRangeSeekBar
+                android:id="@+id/rsb_right"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:rsb_indicator_arrow_size="6dp"
+                app:rsb_indicator_background_color="@color/grey"
+                app:rsb_indicator_height="30dp"
+                app:rsb_indicator_margin="8dp"
+                app:rsb_indicator_radius="4dp"
+                app:rsb_indicator_show_mode="alwaysShow"
+                app:rsb_indicator_width="60dp"
+                app:rsb_max="20"
+                app:rsb_min="-20"
+                app:rsb_mode="single"
+                app:rsb_orientation="right"
+                app:rsb_progress_color="@android:color/black"
+                app:rsb_progress_default_color="@android:color/black"
+                app:rsb_progress_height="@dimen/vertical_progress_height"
+                app:rsb_progress_radius="@dimen/vertical_progress_radius"
+                app:rsb_thumb_drawable="@drawable/thumb"
+                app:rsb_thumb_scale_ratio="1.2"
+                app:rsb_thumb_size="@dimen/vertical_thumb_size"
+                app:rsb_tick_mark_gravity="center"
+                app:rsb_tick_mark_mode="other"
+                app:rsb_tick_mark_text_array="@array/indicator_array_right"
+                app:rsb_tick_mark_text_color="@android:color/background_light"
+                app:rsb_tick_mark_text_margin="16dp"
+                app:rsb_tick_mark_text_size="12dp" />
+
+            <ImageView
+                android:id="@+id/img_mic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_mic" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/mic_grey" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_setting" />
+
+            <ImageView
+                android:id="@+id/img_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_setting" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wifi_purple" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/purple"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C0BBCB621217C050035E8E2 /* ic_checkbox_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0BBCB421217C040035E8E2 /* ic_checkbox_enable.png */; };
+		6C0BBCB721217C050035E8E2 /* ic_checkbox_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0BBCB521217C050035E8E2 /* ic_checkbox_disable.png */; };
+		6C0BBCB921218B260035E8E2 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0BBCB821218B260035E8E2 /* BorderView.swift */; };
+		6C0C18C2212341370044C7F8 /* AddPhoneBookFromInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C18C1212341370044C7F8 /* AddPhoneBookFromInternetViewController.swift */; };
+		6C0C18C42123440A0044C7F8 /* AddPhoneBookFromFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C18C32123440A0044C7F8 /* AddPhoneBookFromFileViewController.swift */; };
+		6C208E8B2124BD71002523D4 /* ic_dropdown_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C208E8A2124BD70002523D4 /* ic_dropdown_arrow.png */; };
+		6C648496211C26C500293DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C648495211C26C500293DCE /* AppDelegate.swift */; };
+		6C648498211C26C500293DCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C648497211C26C500293DCE /* ViewController.swift */; };
+		6C64849B211C26C500293DCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C648499211C26C500293DCE /* Main.storyboard */; };
+		6C64849D211C26C700293DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C64849C211C26C700293DCE /* Assets.xcassets */; };
+		6C6484A0211C26C700293DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C64849E211C26C700293DCE /* LaunchScreen.storyboard */; };
+		6C64FCA2211C5BB200A1FEAD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C64FCA1211C5BB200A1FEAD /* logo.png */; };
+		6C64FCA6211C623900A1FEAD /* SCAudioMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C64FCA4211C623900A1FEAD /* SCAudioMeter.m */; };
+		6C9922CA211D778F0032156F /* ic_action_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B4211D778B0032156F /* ic_action_search.png */; };
+		6C9922CB211D778F0032156F /* ic_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B5211D778C0032156F /* ic_setting.png */; };
+		6C9922CC211D778F0032156F /* ic_wifi_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B6211D778C0032156F /* ic_wifi_purple.png */; };
+		6C9922CD211D778F0032156F /* mic_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B7211D778C0032156F /* mic_yellow.png */; };
+		6C9922CE211D778F0032156F /* ic_mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B8211D778C0032156F /* ic_mic.png */; };
+		6C9922CF211D778F0032156F /* ic_small_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922B9211D778C0032156F /* ic_small_refresh.png */; };
+		6C9922D0211D778F0032156F /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BA211D778C0032156F /* thumb.png */; };
+		6C9922D1211D778F0032156F /* metal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BB211D778D0032156F /* metal.jpg */; };
+		6C9922D2211D778F0032156F /* ic_folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BC211D778D0032156F /* ic_folder.png */; };
+		6C9922D3211D778F0032156F /* ic_action_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BD211D778D0032156F /* ic_action_unchecked.png */; };
+		6C9922D4211D778F0032156F /* ic_action_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BE211D778D0032156F /* ic_action_checked.png */; };
+		6C9922D5211D778F0032156F /* ic_broadcast_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922BF211D778D0032156F /* ic_broadcast_black.png */; };
+		6C9922D6211D778F0032156F /* ic_mic_headphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C0211D778D0032156F /* ic_mic_headphone.png */; };
+		6C9922D7211D778F0032156F /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C1211D778D0032156F /* expand.png */; };
+		6C9922D8211D778F0032156F /* back_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C2211D778E0032156F /* back_setting.png */; };
+		6C9922D9211D778F0032156F /* ic_broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C3211D778E0032156F /* ic_broadcast.png */; };
+		6C9922DA211D778F0032156F /* ic_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C4211D778E0032156F /* ic_cloud.png */; };
+		6C9922DB211D778F0032156F /* ic_headphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C5211D778E0032156F /* ic_headphone.png */; };
+		6C9922DC211D778F0032156F /* ic_headphone_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C6211D778E0032156F /* ic_headphone_disable.png */; };
+		6C9922DD211D778F0032156F /* ic_small_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C7211D778F0032156F /* ic_small_delete.png */; };
+		6C9922DE211D778F0032156F /* mic_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C8211D778F0032156F /* mic_grey.png */; };
+		6C9922DF211D778F0032156F /* mic_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922C9211D778F0032156F /* mic_red.png */; };
+		6C9922E1211D77B10032156F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9922E0211D77B10032156F /* MainViewController.swift */; };
+		6C9922E3211D7DF70032156F /* ic_wifi_purple1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922E2211D7DF60032156F /* ic_wifi_purple1.png */; };
+		6C9922E5211D843A0032156F /* channel_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922E4211D84390032156F /* channel_bg.png */; };
+		6C9922E7211D96170032156F /* ic_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922E6211D96170032156F /* ic_empty.png */; };
+		6C9922EA211D97A00032156F /* max_track.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922E8211D979F0032156F /* max_track.png */; };
+		6C9922EB211D97A00032156F /* min_track.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922E9211D97A00032156F /* min_track.png */; };
+		6C9922ED211D99300032156F /* thumb_seek.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C9922EC211D992F0032156F /* thumb_seek.png */; };
+		6C9922EF211DA6720032156F /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9922EE211DA6720032156F /* OptionsViewController.swift */; };
+		6C9922F1211DA67E0032156F /* AddStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9922F0211DA67E0032156F /* AddStationViewController.swift */; };
+		6C9922F3211DA68C0032156F /* ChooseStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9922F2211DA68C0032156F /* ChooseStationViewController.swift */; };
+		E5B8550EFF6D9B605694C75D /* Pods_LUCIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248C4724C81BB6C487B1EC5E /* Pods_LUCIClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		111968DB3AEF5AC2388ABDE5 /* Pods-LUCIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUCIClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LUCIClient/Pods-LUCIClient.debug.xcconfig"; sourceTree = "<group>"; };
+		248C4724C81BB6C487B1EC5E /* Pods_LUCIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUCIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0BBCB421217C040035E8E2 /* ic_checkbox_enable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_enable.png; sourceTree = "<group>"; };
+		6C0BBCB521217C050035E8E2 /* ic_checkbox_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_disable.png; sourceTree = "<group>"; };
+		6C0BBCB821218B260035E8E2 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		6C0C18C1212341370044C7F8 /* AddPhoneBookFromInternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneBookFromInternetViewController.swift; sourceTree = "<group>"; };
+		6C0C18C32123440A0044C7F8 /* AddPhoneBookFromFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneBookFromFileViewController.swift; sourceTree = "<group>"; };
+		6C208E8A2124BD70002523D4 /* ic_dropdown_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dropdown_arrow.png; sourceTree = "<group>"; };
+		6C648492211C26C500293DCE /* LUCIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUCIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C648495211C26C500293DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C648497211C26C500293DCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C64849A211C26C500293DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6C64849C211C26C700293DCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C64849F211C26C700293DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C6484A1211C26C700293DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C64FCA1211C5BB200A1FEAD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		6C64FCA3211C5DFE00A1FEAD /* LUCIClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LUCIClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C64FCA4211C623900A1FEAD /* SCAudioMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioMeter.m; sourceTree = "<group>"; };
+		6C64FCA5211C623900A1FEAD /* SCAudioMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioMeter.h; sourceTree = "<group>"; };
+		6C9922B4211D778B0032156F /* ic_action_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_search.png; sourceTree = "<group>"; };
+		6C9922B5211D778C0032156F /* ic_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_setting.png; sourceTree = "<group>"; };
+		6C9922B6211D778C0032156F /* ic_wifi_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wifi_purple.png; sourceTree = "<group>"; };
+		6C9922B7211D778C0032156F /* mic_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic_yellow.png; sourceTree = "<group>"; };
+		6C9922B8211D778C0032156F /* ic_mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mic.png; sourceTree = "<group>"; };
+		6C9922B9211D778C0032156F /* ic_small_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_small_refresh.png; sourceTree = "<group>"; };
+		6C9922BA211D778C0032156F /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
+		6C9922BB211D778D0032156F /* metal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metal.jpg; sourceTree = "<group>"; };
+		6C9922BC211D778D0032156F /* ic_folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_folder.png; sourceTree = "<group>"; };
+		6C9922BD211D778D0032156F /* ic_action_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_unchecked.png; sourceTree = "<group>"; };
+		6C9922BE211D778D0032156F /* ic_action_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_checked.png; sourceTree = "<group>"; };
+		6C9922BF211D778D0032156F /* ic_broadcast_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_broadcast_black.png; sourceTree = "<group>"; };
+		6C9922C0211D778D0032156F /* ic_mic_headphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mic_headphone.png; sourceTree = "<group>"; };
+		6C9922C1211D778D0032156F /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
+		6C9922C2211D778E0032156F /* back_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_setting.png; sourceTree = "<group>"; };
+		6C9922C3211D778E0032156F /* ic_broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_broadcast.png; sourceTree = "<group>"; };
+		6C9922C4211D778E0032156F /* ic_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_cloud.png; sourceTree = "<group>"; };
+		6C9922C5211D778E0032156F /* ic_headphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_headphone.png; sourceTree = "<group>"; };
+		6C9922C6211D778E0032156F /* ic_headphone_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_headphone_disable.png; sourceTree = "<group>"; };
+		6C9922C7211D778F0032156F /* ic_small_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_small_delete.png; sourceTree = "<group>"; };
+		6C9922C8211D778F0032156F /* mic_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic_grey.png; sourceTree = "<group>"; };
+		6C9922C9211D778F0032156F /* mic_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic_red.png; sourceTree = "<group>"; };
+		6C9922E0211D77B10032156F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6C9922E2211D7DF60032156F /* ic_wifi_purple1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wifi_purple1.png; sourceTree = "<group>"; };
+		6C9922E4211D84390032156F /* channel_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = channel_bg.png; sourceTree = "<group>"; };
+		6C9922E6211D96170032156F /* ic_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_empty.png; sourceTree = "<group>"; };
+		6C9922E8211D979F0032156F /* max_track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = max_track.png; sourceTree = "<group>"; };
+		6C9922E9211D97A00032156F /* min_track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = min_track.png; sourceTree = "<group>"; };
+		6C9922EC211D992F0032156F /* thumb_seek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb_seek.png; sourceTree = "<group>"; };
+		6C9922EE211DA6720032156F /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		6C9922F0211DA67E0032156F /* AddStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStationViewController.swift; sourceTree = "<group>"; };
+		6C9922F2211DA68C0032156F /* ChooseStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStationViewController.swift; sourceTree = "<group>"; };
+		E8020EAC5078F128B1F4B4F7 /* Pods-LUCIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUCIClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LUCIClient/Pods-LUCIClient.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C64848F211C26C500293DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B8550EFF6D9B605694C75D /* Pods_LUCIClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C648489211C26C500293DCE = {
+			isa = PBXGroup;
+			children = (
+				6C648494211C26C500293DCE /* LUCIClient */,
+				6C648493211C26C500293DCE /* Products */,
+				E2185A5C21D524BBB7227D40 /* Pods */,
+				73A91674FACD70B8EBF17624 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6C648493211C26C500293DCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C648492211C26C500293DCE /* LUCIClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C648494211C26C500293DCE /* LUCIClient */ = {
+			isa = PBXGroup;
+			children = (
+				6C64FCA0211C5B9200A1FEAD /* Resources */,
+				6C64FC99211C5A1800A1FEAD /* ThirdParty */,
+				6C64FC97211C5A0600A1FEAD /* Views */,
+				6C64FC96211C59FC00A1FEAD /* ViewController */,
+				6C64FC9A211C5A5F00A1FEAD /* Supporting Files */,
+				6C648495211C26C500293DCE /* AppDelegate.swift */,
+				6C648497211C26C500293DCE /* ViewController.swift */,
+				6C64FCA3211C5DFE00A1FEAD /* LUCIClient-Bridging-Header.h */,
+			);
+			path = LUCIClient;
+			sourceTree = "<group>";
+		};
+		6C64FC96211C59FC00A1FEAD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C9922E0211D77B10032156F /* MainViewController.swift */,
+				6C9922EE211DA6720032156F /* OptionsViewController.swift */,
+				6C9922F0211DA67E0032156F /* AddStationViewController.swift */,
+				6C9922F2211DA68C0032156F /* ChooseStationViewController.swift */,
+				6C0C18C1212341370044C7F8 /* AddPhoneBookFromInternetViewController.swift */,
+				6C0C18C32123440A0044C7F8 /* AddPhoneBookFromFileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6C64FC97211C5A0600A1FEAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C0BBCB821218B260035E8E2 /* BorderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C64FC99211C5A1800A1FEAD /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				6C64FCA5211C623900A1FEAD /* SCAudioMeter.h */,
+				6C64FCA4211C623900A1FEAD /* SCAudioMeter.m */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		6C64FC9A211C5A5F00A1FEAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C648499211C26C500293DCE /* Main.storyboard */,
+				6C64849C211C26C700293DCE /* Assets.xcassets */,
+				6C64849E211C26C700293DCE /* LaunchScreen.storyboard */,
+				6C6484A1211C26C700293DCE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C64FCA0211C5B9200A1FEAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C208E8A2124BD70002523D4 /* ic_dropdown_arrow.png */,
+				6C0BBCB421217C040035E8E2 /* ic_checkbox_enable.png */,
+				6C0BBCB521217C050035E8E2 /* ic_checkbox_disable.png */,
+				6C9922EC211D992F0032156F /* thumb_seek.png */,
+				6C9922E8211D979F0032156F /* max_track.png */,
+				6C9922E9211D97A00032156F /* min_track.png */,
+				6C9922E6211D96170032156F /* ic_empty.png */,
+				6C9922E4211D84390032156F /* channel_bg.png */,
+				6C9922E2211D7DF60032156F /* ic_wifi_purple1.png */,
+				6C9922C2211D778E0032156F /* back_setting.png */,
+				6C9922C1211D778D0032156F /* expand.png */,
+				6C9922BE211D778D0032156F /* ic_action_checked.png */,
+				6C9922B4211D778B0032156F /* ic_action_search.png */,
+				6C9922BD211D778D0032156F /* ic_action_unchecked.png */,
+				6C9922BF211D778D0032156F /* ic_broadcast_black.png */,
+				6C9922C3211D778E0032156F /* ic_broadcast.png */,
+				6C9922C4211D778E0032156F /* ic_cloud.png */,
+				6C9922BC211D778D0032156F /* ic_folder.png */,
+				6C9922C6211D778E0032156F /* ic_headphone_disable.png */,
+				6C9922C5211D778E0032156F /* ic_headphone.png */,
+				6C9922C0211D778D0032156F /* ic_mic_headphone.png */,
+				6C9922B8211D778C0032156F /* ic_mic.png */,
+				6C9922B5211D778C0032156F /* ic_setting.png */,
+				6C9922C7211D778F0032156F /* ic_small_delete.png */,
+				6C9922B9211D778C0032156F /* ic_small_refresh.png */,
+				6C9922B6211D778C0032156F /* ic_wifi_purple.png */,
+				6C9922BB211D778D0032156F /* metal.jpg */,
+				6C9922C8211D778F0032156F /* mic_grey.png */,
+				6C9922C9211D778F0032156F /* mic_red.png */,
+				6C9922B7211D778C0032156F /* mic_yellow.png */,
+				6C9922BA211D778C0032156F /* thumb.png */,
+				6C64FCA1211C5BB200A1FEAD /* logo.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		73A91674FACD70B8EBF17624 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				248C4724C81BB6C487B1EC5E /* Pods_LUCIClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2185A5C21D524BBB7227D40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				111968DB3AEF5AC2388ABDE5 /* Pods-LUCIClient.debug.xcconfig */,
+				E8020EAC5078F128B1F4B4F7 /* Pods-LUCIClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C648491211C26C500293DCE /* LUCIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C6484A4211C26C700293DCE /* Build configuration list for PBXNativeTarget "LUCIClient" */;
+			buildPhases = (
+				8A137719DC4C2239D0DD617C /* [CP] Check Pods Manifest.lock */,
+				6C64848E211C26C500293DCE /* Sources */,
+				6C64848F211C26C500293DCE /* Frameworks */,
+				6C648490211C26C500293DCE /* Resources */,
+				2ACD8E5BB0A95D2629ABA016 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LUCIClient;
+			productName = LUCIClient;
+			productReference = 6C648492211C26C500293DCE /* LUCIClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C64848A211C26C500293DCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Adrian;
+				TargetAttributes = {
+					6C648491211C26C500293DCE = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 6C64848D211C26C500293DCE /* Build configuration list for PBXProject "LUCIClient" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6C648489211C26C500293DCE;
+			productRefGroup = 6C648493211C26C500293DCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C648491211C26C500293DCE /* LUCIClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C648490211C26C500293DCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9922DB211D778F0032156F /* ic_headphone.png in Resources */,
+				6C64FCA2211C5BB200A1FEAD /* logo.png in Resources */,
+				6C6484A0211C26C700293DCE /* LaunchScreen.storyboard in Resources */,
+				6C9922D0211D778F0032156F /* thumb.png in Resources */,
+				6C9922E7211D96170032156F /* ic_empty.png in Resources */,
+				6C208E8B2124BD71002523D4 /* ic_dropdown_arrow.png in Resources */,
+				6C9922DD211D778F0032156F /* ic_small_delete.png in Resources */,
+				6C9922E3211D7DF70032156F /* ic_wifi_purple1.png in Resources */,
+				6C9922EB211D97A00032156F /* min_track.png in Resources */,
+				6C9922ED211D99300032156F /* thumb_seek.png in Resources */,
+				6C9922D5211D778F0032156F /* ic_broadcast_black.png in Resources */,
+				6C9922EA211D97A00032156F /* max_track.png in Resources */,
+				6C9922D4211D778F0032156F /* ic_action_checked.png in Resources */,
+				6C9922D1211D778F0032156F /* metal.jpg in Resources */,
+				6C64849D211C26C700293DCE /* Assets.xcassets in Resources */,
+				6C9922CF211D778F0032156F /* ic_small_refresh.png in Resources */,
+				6C9922DC211D778F0032156F /* ic_headphone_disable.png in Resources */,
+				6C64849B211C26C500293DCE /* Main.storyboard in Resources */,
+				6C9922D9211D778F0032156F /* ic_broadcast.png in Resources */,
+				6C9922E5211D843A0032156F /* channel_bg.png in Resources */,
+				6C9922CB211D778F0032156F /* ic_setting.png in Resources */,
+				6C0BBCB721217C050035E8E2 /* ic_checkbox_disable.png in Resources */,
+				6C9922D3211D778F0032156F /* ic_action_unchecked.png in Resources */,
+				6C9922DA211D778F0032156F /* ic_cloud.png in Resources */,
+				6C0BBCB621217C050035E8E2 /* ic_checkbox_enable.png in Resources */,
+				6C9922CD211D778F0032156F /* mic_yellow.png in Resources */,
+				6C9922CC211D778F0032156F /* ic_wifi_purple.png in Resources */,
+				6C9922DE211D778F0032156F /* mic_grey.png in Resources */,
+				6C9922CE211D778F0032156F /* ic_mic.png in Resources */,
+				6C9922D2211D778F0032156F /* ic_folder.png in Resources */,
+				6C9922CA211D778F0032156F /* ic_action_search.png in Resources */,
+				6C9922D6211D778F0032156F /* ic_mic_headphone.png in Resources */,
+				6C9922DF211D778F0032156F /* mic_red.png in Resources */,
+				6C9922D7211D778F0032156F /* expand.png in Resources */,
+				6C9922D8211D778F0032156F /* back_setting.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ACD8E5BB0A95D2629ABA016 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LUCIClient/Pods-LUCIClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EZAudio/EZAudio.framework",
+				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/TPCircularBuffer/TPCircularBuffer.framework",
+				"${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/VerticalSteppedSlider/VerticalSteppedSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZAudio.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPCircularBuffer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICheckbox_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalSteppedSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LUCIClient/Pods-LUCIClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A137719DC4C2239D0DD617C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LUCIClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C64848E211C26C500293DCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C0C18C42123440A0044C7F8 /* AddPhoneBookFromFileViewController.swift in Sources */,
+				6C648498211C26C500293DCE /* ViewController.swift in Sources */,
+				6C648496211C26C500293DCE /* AppDelegate.swift in Sources */,
+				6C0C18C2212341370044C7F8 /* AddPhoneBookFromInternetViewController.swift in Sources */,
+				6C64FCA6211C623900A1FEAD /* SCAudioMeter.m in Sources */,
+				6C9922F3211DA68C0032156F /* ChooseStationViewController.swift in Sources */,
+				6C0BBCB921218B260035E8E2 /* BorderView.swift in Sources */,
+				6C9922F1211DA67E0032156F /* AddStationViewController.swift in Sources */,
+				6C9922E1211D77B10032156F /* MainViewController.swift in Sources */,
+				6C9922EF211DA6720032156F /* OptionsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6C648499211C26C500293DCE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C64849A211C26C500293DCE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C64849E211C26C700293DCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C64849F211C26C700293DCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6C6484A2211C26C700293DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6C6484A3211C26C700293DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C6484A5211C26C700293DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111968DB3AEF5AC2388ABDE5 /* Pods-LUCIClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZFM9CL2BE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/",
+					"${PODS_ROOT}/EZAudio",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/LUCIClient/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skmap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "LUCIClient/LUCIClient-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6C6484A6211C26C700293DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8020EAC5078F128B1F4B4F7 /* Pods-LUCIClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZFM9CL2BE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/",
+					"${PODS_ROOT}/EZAudio",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/LUCIClient/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skmap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "LUCIClient/LUCIClient-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C64848D211C26C500293DCE /* Build configuration list for PBXProject "LUCIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6484A2211C26C700293DCE /* Debug */,
+				6C6484A3211C26C700293DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C6484A4211C26C700293DCE /* Build configuration list for PBXNativeTarget "LUCIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C6484A5211C26C700293DCE /* Debug */,
+				6C6484A6211C26C700293DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C64848A211C26C500293DCE /* Project object */;
+}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "30833726691",
+    "firebase_url": "https://luci-75af7.firebaseio.com",
+    "project_id": "luci-75af7",
+    "storage_bucket": "luci-75af7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30833726691:android:e3220d5d833531d9",
+        "android_client_info": {
+          "package_name": "com.luci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30833726691-p1br23d7spvc0u8m7jnpp7i4s3m535sc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luci",
+            "certificate_hash": "fe0648012209fcc85c55985f508e8d46d6fc9670"
+          }
+        },
+        {
+          "client_id": "30833726691-qtqhoo890g8cavpg96g88gcsk207j732.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmz-YzmyExni0FMKHM951I4T8g80ydADE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30833726691-qtqhoo890g8cavpg96g88gcsk207j732.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+/* here you can put your own css to customize and override the theme */
+.auth-heading {
+    color: #fafafa;
+    background-color: #4E9237;
+    border-color: #35aa47;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.panel-body {
+    padding-top: 50px;
+}
+
+.data-loading {
+    margin-top: 200px; 
+    margin-left: 500px; 
+    font-size: 80px;
+    text-align:center; 
+}
+
+#protocol_info {
+    width: 600px;
+}

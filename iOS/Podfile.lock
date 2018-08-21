@@ -1,0 +1,36 @@
+PODS:
+  - EZAudio (1.1.5):
+    - EZAudio/Full (= 1.1.5)
+  - EZAudio/Core (1.1.5)
+  - EZAudio/Full (1.1.5):
+    - EZAudio/Core
+    - TPCircularBuffer (= 1.1)
+  - McPicker (1.0.0)
+  - TPCircularBuffer (1.1)
+  - UICheckbox.Swift (1.0.0)
+  - VerticalSteppedSlider (0.1.0)
+
+DEPENDENCIES:
+  - EZAudio (~> 1.1.4)
+  - McPicker
+  - UICheckbox.Swift
+  - VerticalSteppedSlider
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - EZAudio
+    - McPicker
+    - TPCircularBuffer
+    - UICheckbox.Swift
+    - VerticalSteppedSlider
+
+SPEC CHECKSUMS:
+  EZAudio: 3b1cb4b6d7ebca68f0c2478576d75940aad4aa99
+  McPicker: 130183cd3d22fc6933ea9e63c5a0d0d1becc0122
+  TPCircularBuffer: 4960a919e667280f7f38963d771f45871b64fe62
+  UICheckbox.Swift: 85715689206fac5bae38b308f19c2a3e00442c3b
+  VerticalSteppedSlider: c1513f095cda3d27e327de7fab6d3f8425a8dc46
+
+PODFILE CHECKSUM: 3cfeff7c425bb97c39a069c707cc077ee97dea18
+
+COCOAPODS: 1.5.0
