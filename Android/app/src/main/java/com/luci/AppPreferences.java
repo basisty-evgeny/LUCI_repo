@@ -6,6 +6,9 @@ public class AppPreferences {
 	private static SharedPreferences instance = null;
 	
 	public static class KEY {
+		// user selected channel id
+		public static int CURRENT_CHANNEL_ID = -1;
+
 		// sign in
 		public static final String ACTIVATED = "ACTIVATED";
 		public static final String SIGN_IN_USER_EMAIL = "SIGN_IN_USER_EMAIL";
@@ -17,6 +20,8 @@ public class AppPreferences {
 	
 	public static void initialize(SharedPreferences pref) {
 		instance = pref;
+
+		KEY.CURRENT_CHANNEL_ID = getInt("current_channel_id", -1);
 	}
 	
 	// check contain

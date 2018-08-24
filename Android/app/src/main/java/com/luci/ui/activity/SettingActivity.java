@@ -7,8 +7,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 
-import com.aditya.filebrowser.Constants;
-import com.aditya.filebrowser.FileChooser;
+//import com.aditya.filebrowser.Constants;
+//import com.aditya.filebrowser.FileChooser;
 import com.luci.R;
 import com.luci.ui.dialog.PhonebookInternetDlg;
 
@@ -48,9 +48,9 @@ public class SettingActivity extends BaseActivity implements
             break;
 
             case R.id.btn_setting2: {
-                Intent intent = new Intent(instance, FileChooser.class);
-                intent.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.SINGLE_SELECTION.ordinal());
-                startActivityForResult(intent, PICK_FILE_REQUEST);
+//                Intent intent = new Intent(instance, FileChooser.class);
+//                intent.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.SINGLE_SELECTION.ordinal());
+//                startActivityForResult(intent, PICK_FILE_REQUEST);
             }
             break;
 

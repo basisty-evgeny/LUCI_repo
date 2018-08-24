@@ -17,7 +17,7 @@ public abstract class BaseActionBarActivity extends AppCompatActivity {
     }
 
     public void initActionBar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 

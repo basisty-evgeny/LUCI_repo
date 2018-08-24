@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
     defaultConfig {
         applicationId "com.luci"
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 15
+        targetSdkVersion 23
         multiDexEnabled true
         versionCode 1
         versionName "1.0"
@@ -20,22 +22,26 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 
-//    implementation 'com.google.firebase:firebase-core:16.0.1'
+    compile fileTree(dir: 'jniLibs', include: ['*.so'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
-    implementation 'com.android.support:cardview-v7:28.0.0-beta01'
-    implementation 'com.android.support:design:28.0.0-beta01'
-    implementation 'com.android.support:multidex:1.0.3'
-
-    implementation 'com.github.Jay-Goo:RangeSeekBar:v2.0.4'
-    implementation 'com.github.GrenderG:Toasty:1.3.0'
-    implementation 'com.github.bmelnychuk:atv:1.2.+'
-    implementation 'com.adityak:browsemyfiles:1.7'
+    //    testImplementation 'junit:junit:4.12'
+    //    compile 'com.android.support.test:runner:0.5'
+    //    compile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //    compile 'com.google.firebase:firebase-core:16.0.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    //    compile 'com.github.Jay-Goo:RangeSeekBar:v2.0.4'
+    //    compile 'com.github.GrenderG:Toasty:1.3.0'
+    //    compile 'com.github.bmelnychuk:atv:1.2.0'
+    //    compile 'com.adityak:browsemyfiles:1.7'
+    compile project(':RangeSeekBar')
+    compile project(':toasty')
+    compile project(':android-tree-view')
+    compile 'com.google.android.gms:play-services:8.4.0'
 }
 
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'

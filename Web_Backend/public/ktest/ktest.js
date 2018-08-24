@@ -1,4 +1,4 @@
-var serverURL = "http://192.168.2.137:8000";
+var serverURL = "http://192.168.2.43:8000";
 
 $(document).delegate('#tregister', 'click', function(e) {
 	var email = $("#registerEmail").val();
@@ -16,7 +16,7 @@ $(document).delegate('#tregister', 'click', function(e) {
 		if(success) 
 			alert("Register success!");			
 		else
-			alert("Register Fail!");			
+			alert(data.reason);			
 	}
 	})
 });
@@ -25,7 +25,7 @@ $(document).delegate('#tlogin', 'click', function(e) {
 	
 	var email = $("#loginEmail").val();		
 	var post_data = "email=" + email +
-                    "&password=" + '123456';
+                    "&password=" + '111111';
 
 	var url = serverURL + "/signin";
 	$.ajax({url: url, type: "POST", data: post_data, success: function(res)
@@ -52,7 +52,9 @@ $(document).delegate('#tnewchannel', 'click', function(e) {
 					'&dynamic_jitter_buffers=' + 3000 + 
 					'&format=' + 'MP3' + 
 					'&bitrate=' + 100 + 
-					'&samplerates=' + 2100;
+					'&samplerate=' + 2100 +
+					'&stereo=' + true + 
+					'&talk_mode=' + false;
 
 	var url = serverURL + "/channel/create";
 	$.ajax({url: url, type: "POST", data: post_data, success: function(res)
@@ -84,7 +86,9 @@ $(document).delegate('#tupdatechannel', 'click', function(e) {
 					'&dynamic_jitter_buffers=' + 3300 + 
 					'&format=' + 'AVI' + 
 					'&bitrate=' + 1100 + 
-					'&samplerates=' + 22100;
+					'&samplerate=' + 22100 +
+					'&stereo=' + true + 
+					'&talk_mode=' + true;
 
 	var url = serverURL + "/channel/update";
 	$.ajax({url: url, type: "POST", data: post_data, success: function(res)

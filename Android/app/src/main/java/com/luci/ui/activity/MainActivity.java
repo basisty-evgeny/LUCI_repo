@@ -15,16 +15,22 @@ import com.jaygoo.widget.OnRangeChangedListener;
 import com.jaygoo.widget.RangeSeekBar;
 import com.luci.Engine.MyMediaRecorder;
 import com.luci.R;
+import com.luci.util.Constant;
 import com.luci.util.FileUtil;
 
 import java.io.File;
 import java.util.Locale;
 
 import es.dmoral.toasty.Toasty;
+import ice.caster.android.shout.Config;
+import ice.caster.android.shout.Encoder;
 
 public class MainActivity extends BaseActivity implements
         View.OnClickListener {
     public static MainActivity instance;
+
+    // Encoding
+    Encoder encoder;
 
     // UI
     TextView txt_server;
@@ -59,11 +65,11 @@ public class MainActivity extends BaseActivity implements
         instance = this;
         setContentView(R.layout.activity_main);
 
-        txt_server = findViewById(R.id.txt_server);
-        img_start = findViewById(R.id.img_start);
+        txt_server = (TextView) findViewById(R.id.txt_server);
+        img_start = (ImageView) findViewById(R.id.img_start);
         view_status = findViewById(R.id.view_status);
 
-        prog_background = findViewById(R.id.prog_background);
+        prog_background = (ImageView) findViewById(R.id.prog_background);
         prog_background.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
             public void onLayoutChange(View view, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
@@ -71,10 +77,10 @@ public class MainActivity extends BaseActivity implements
                 mProgBackWidth = right - left;
             }
         });
-        prog_out = findViewById(R.id.prog_out);
-        prog_in = findViewById(R.id.prog_in);
+        prog_out = (ImageView) findViewById(R.id.prog_out);
+        prog_in = (ImageView) findViewById(R.id.prog_in);
 
-        rsb_left = findViewById(R.id.rsb_left);
+        rsb_left = (RangeSeekBar) findViewById(R.id.rsb_left);
         rsb_left.setValue(0);
         rsb_left.setIndicatorText("0 dB");
         rsb_left.setOnRangeChangedListener(new OnRangeChangedListener() {
@@ -88,7 +94,7 @@ public class MainActivity extends BaseActivity implements
             public void onStopTrackingTouch(RangeSeekBar view, boolean isLeft) { }
         });
 
-        rsb_right = findViewById(R.id.rsb_right);
+        rsb_right = (RangeSeekBar) findViewById(R.id.rsb_right);
         rsb_right.setValue(0);
         rsb_right.setIndicatorText("0 dB");
         rsb_right.setOnRangeChangedListener(new OnRangeChangedListener() {
@@ -102,8 +108,8 @@ public class MainActivity extends BaseActivity implements
             public void onStopTrackingTouch(RangeSeekBar view, boolean isLeft) { }
         });
 
-        img_headphone = findViewById(R.id.img_headphone);
-        img_mic = findViewById(R.id.img_mic);
+        img_headphone = (ImageView) findViewById(R.id.img_headphone);
+        img_mic = (ImageView) findViewById(R.id.img_mic);
 
         img_start.setOnClickListener(this);
         img_headphone.setOnClickListener(this);
@@ -111,6 +117,52 @@ public class MainActivity extends BaseActivity implements
         img_mic.setOnClickListener(this);
 
         mRecorder = new MyMediaRecorder();
+
+
+        encoder = new Encoder(
+                new Config().host(Constant.ICE_HOST).port(Constant.ICE_PORT).mount(Constant.ICE_MOUNT)
+                        .username(Constant.ICE_USER).password(Constant.ICE_PASS).sampleRate(8000), this);
+
+
+        /**
+         * This is short-hand setter and handler should be static class
+         */
+        encoder.setHandle(new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case Encoder.MSG_REC_STARTED:
+                        Toasty.success(instance, "Started!!", Toast.LENGTH_LONG).show();
+                        break;
+                    case Encoder.MSG_REC_STOPPED:
+                        Toasty.warning(instance, "Stoped!!", Toast.LENGTH_LONG).show();
+                        break;
+                    case Encoder.MSG_ERROR_GET_MIN_BUFFERSIZE:
+                        Toasty.error(instance, "Error get min buffer size!", Toast.LENGTH_LONG).show();
+                        startStopBroadcast();
+                        break;
+                    case Encoder.MSG_ERROR_REC_START:
+                        Toasty.error(instance, "Error rec start!", Toast.LENGTH_LONG).show();
+                        startStopBroadcast();
+                        break;
+                    case Encoder.MSG_ERROR_AUDIO_RECORD:
+                        Toasty.error(instance, "Error audio record!", Toast.LENGTH_LONG).show();
+                        startStopBroadcast();
+                        break;
+                    case Encoder.MSG_ERROR_AUDIO_ENCODE:
+                        Toasty.error(instance, "Error audio encode!", Toast.LENGTH_LONG).show();
+                        startStopBroadcast();
+                        break;
+                    case Encoder.MSG_ERROR_STREAM_INIT:
+                        Toasty.error(instance, "Error stream init!", Toast.LENGTH_LONG).show();
+                        startStopBroadcast();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+
     }
 
     @Override
@@ -174,11 +226,9 @@ public class MainActivity extends BaseActivity implements
 
                         if (isStart) {
                             startListenAudio();
-                            Toasty.success(instance, "Started!!", Toast.LENGTH_LONG).show();
                         }
                         else {
                             stopListenAudio();
-                            Toasty.warning(instance, "Stoped!!", Toast.LENGTH_LONG).show();
                         }
 
                     }
@@ -198,52 +248,29 @@ public class MainActivity extends BaseActivity implements
     }
 
     private void startListenAudio() {
-        mRecorder.startRecorder();
-        isThreadRun = true;
-
-        thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (isThreadRun) {
-                    try {
-                        float volume = mRecorder.getMaxAmplitude();  //Get the sound pressure value
-                        if(volume > 0 && volume < 1000000) {
-                            Log.e("Decibel", String.format("%f", volume));
-                            mDecibelSize = 20 * (float)(Math.log10(volume));
-                            // Update with thread
-                            Message message = new Message();
-                            message.what = 1;
-                            handler.sendMessage(message);
-                        }
-                        Thread.sleep(300);
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-
-                        isThreadRun = false;
-                        break;
-                    }
-                }
-            }
-        });
-        thread.start();
+        encoder.start();
     }
 
     private void stopListenAudio() {
-        mRecorder.stopRecording();
-
-        if (thread != null)
-            thread.interrupt();
-
-        mDecibelSize = 0;
-        updateData();
+        encoder.stop();
     }
 
     private void updateData() {
+        if (!isStart)
+            mDecibelSize = 0;
+
        ViewGroup.LayoutParams lp =  prog_out.getLayoutParams();
        lp.width = (int)(mProgBackWidth * mDecibelSize / 120);
        prog_out.setLayoutParams(lp);
     }
+
+    public void updateData(float val) {
+        mDecibelSize = val;
+        Message message = new Message();
+        message.what = 1;
+        handler.sendMessage(message);
+    }
+
 
     final Handler handler = new Handler(){
         @Override

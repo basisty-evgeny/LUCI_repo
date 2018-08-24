@@ -21,12 +21,22 @@ class ProxyAuthController extends Controller
 
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6',
-            'activation_code' => 'required|min:6',
-        ]);
+        $validatorName =  Validator::make($data, ['name' => 'required|max:255',]);
+        if ($validatorName->fails())
+            return 100;
+
+        $validatorEmail =  Validator::make($data, ['email' => 'required|email|max:255|unique:users',]);
+        if ($validatorEmail->fails())
+            return 101;
+
+        $validatorPassword =  Validator::make($data, ['password' => 'required|min:6',]);
+        if ($validatorPassword->fails())
+            return 102;
+
+        $validatorActiveCode =  Validator::make($data, ['activation_code' => 'required|min:6',]);
+        if ($validatorActiveCode->fails())
+            return 103;
+
     }
 
     protected function create(array $data)
@@ -63,8 +73,12 @@ class ProxyAuthController extends Controller
     {
         $validator = $this->validator($request->all());
 
-        if ($validator->fails()) {
-            echo json_encode(['success'=>false], JSON_UNESCAPED_UNICODE);
+        if ($validator >= 100) {
+            $result = array(
+                'success' => false,
+                'reason' => $validator,
+            );
+            echo json_encode($result, JSON_UNESCAPED_UNICODE);
             return;
         }
 

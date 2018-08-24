@@ -43,10 +43,10 @@ public class OptionsActivity extends BaseActionBarActivity implements
         pagerAdapter.addFragment(mSipFrag, getString(R.string.SIP));
         pagerAdapter.addFragment(mGeneralFrag, getString(R.string.General));
 
-        ViewPager viewPager = findViewById(R.id.viewPager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(pagerAdapter);
 
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
         findViewById(R.id.btn_ok).setOnClickListener(this);

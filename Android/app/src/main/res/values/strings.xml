@@ -27,10 +27,15 @@
     <string name="invalid_jitter_empty">Please input jitter buffer(ms)</string>
     <string name="invalid_name_empty">Please input name</string>
     <string name="invalid_organization_empty">Please input organization</string>
+    <string name="invalid_password_empty">Please input password</string>
+    <string name="invalid_password_length">Password must be at least 6 characters</string>
+    <string name="invalid_password">Passwords don\'t match</string>
     <string name="invalid_url_empty">Please input URL</string>
     <string name="jitter_buffer">Jitter buffer(ms)</string>
     <string name="jitter_dynamic">Dynamic jitter buffer(ms)</string>
+    <string name="Login">Login</string>
     <string name="Name">Name</string>
+    <string name="N0_station">No stations to show.</string>
     <string name="Ok">Ok</string>
     <string name="Options">Options</string>
     <string name="option0">Keep screen on while active</string>
@@ -53,6 +58,7 @@
     <string name="panel_tick6">105</string>
     <string name="panel_tick7">120</string>
     <string name="Password">Password</string>
+    <string name="PasswordConfirm">Confirm password</string>
     <string name="Protocol">Protocol</string>
     <string name="Phonebook_">Phonebook:</string>
     <string name="Register">Register</string>
@@ -159,4 +165,29 @@
         <item>-15</item>
         <item>-20</item>
     </string-array>
+
+    <string name="register_success">Registration succeeded!</string>
+    <string name="register_fail">Registration failed!</string>
+    <string name="login_success">Login succeeded!</string>
+    <string name="login_fail">Login failed!</string>
+    <string name="newchannel_success">New channel added successfully!</string>
+    <string name="newchannel_fail">Failed to add new channel!</string>
+    <string name="updatechannel_success">Channel updated successfully!</string>
+    <string name="updatechannel_fail">Failed to update!</string>
+    <string name="deletechannel_success">Channel deleted successfully!</string>
+    <string name="deletechannel_fail">Failed to delete!</string>
+    <string name="channel_list_error">Failed to load channel list!</string>
+
+    <!--ajax call errors-->
+    <string name="aj_need_signin">Oops! Please sign in first.</string>
+    <string name="aj_invalid_email">Failed! Invalid email-address.</string>
+    <string name="aj_invalid_password">Failed! Invalid password length.</string>
+    <string name="aj_invalid_activationcode">Failed! Invalid activation code.</string>
+    <string name="aj_invalid_channelid">Failed! Invalid channel id.</string>
+
+    <string name="server_not_found">Server not found!</string>
+    <string name="server_error">Internal server error!</string>
+    <string name="response_parse_error">Server response parse error!</string>
+    
+    <string name="station_not_selected">Please select a station!</string>
 </resources>

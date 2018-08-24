@@ -34,7 +34,7 @@ public class OptionGeneralFragment extends BaseFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		mView = inflater.inflate(R.layout.fragment_options_general, container, false);
 
-		Spinner spn_preset = mView.findViewById(R.id.spn_preset);
+		Spinner spn_preset = (Spinner) mView.findViewById(R.id.spn_preset);
 		String[] presets = getResources().getStringArray(R.array.audio_input_category);
 		ArrayAdapter protocolAdapter = new ArrayAdapter<>(mActivity, android.R.layout.simple_spinner_item, presets);
 		spn_preset.setAdapter(protocolAdapter);

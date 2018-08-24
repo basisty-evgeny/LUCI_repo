@@ -1,7 +1,9 @@
 package com.luci.ui.activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +11,7 @@ import android.support.v4.app.ActivityCompat;
 
 import com.luci.AppPreferences;
 import com.luci.R;
+import com.luci.util.Constant;
 
 public class SplashActivity extends BaseActivity {
     public static SplashActivity instance;
@@ -59,7 +62,18 @@ public class SplashActivity extends BaseActivity {
                     Intent intent = new Intent(instance, MainActivity.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(instance, RegisterActivity.class);
+                    SharedPreferences sp = getSharedPreferences(Constant.USERINFO_ID, Context.MODE_PRIVATE );
+                    boolean firstuse = sp.getBoolean( "firstuse", true );
+
+                    Intent intent;
+
+                    if (firstuse) {
+                        intent = new Intent(instance, RegisterActivity.class);
+//                        intent = new Intent(instance, LoginActivity.class);
+                    } else {
+                        intent = new Intent(instance, LoginActivity.class);
+                    }
+
                     startActivity(intent);
                 }
             }

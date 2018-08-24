@@ -23,9 +23,9 @@ public class LargeCategoryViewHolder extends TreeNode.BaseNodeViewHolder<IconTre
 		final LayoutInflater inflater = LayoutInflater.from(context);
 		mView = inflater.inflate(R.layout.treenode_large_category, null, false);
 
-		TextView tvValue = mView.findViewById(R.id.txt_value);
+		TextView tvValue = (TextView) mView.findViewById(R.id.txt_value);
 		tvValue.setText(value.model.name);
-		
+
 		mNode.setClickListener(new TreeNodeClickListener() {
 			@Override
 			public void onClick(TreeNode node, Object value) {

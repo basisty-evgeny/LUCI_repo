@@ -12,6 +12,7 @@ import com.unnamed.b.atv.model.TreeNode;
 /**
  * Created by Bogdan Melnychuk on 2/12/15.
  */
+
 public class IconTreeItemViewHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemViewHolder.IconTreeItem> {
 	public IconTreeItemViewHolder(Context context) {
 		super(context);
@@ -22,7 +23,7 @@ public class IconTreeItemViewHolder extends TreeNode.BaseNodeViewHolder<IconTree
 		final LayoutInflater inflater = LayoutInflater.from(context);
 		final View view = inflater.inflate(R.layout.treenode_icon, null, false);
 
-		TextView tvValue = view.findViewById(R.id.txt_value);
+		TextView tvValue = (TextView) view.findViewById(R.id.txt_value);
 		tvValue.setText(value.model.name);
 
 		view.findViewById(R.id.btn_add_folder).setOnClickListener(new View.OnClickListener() {
@@ -62,6 +63,10 @@ public class IconTreeItemViewHolder extends TreeNode.BaseNodeViewHolder<IconTree
 			mMainCategoryId = main_category_id;
 			mStoreId = store_id;
 			this.model = model;
+		}
+
+		public StationModel getModel() {
+			return model;
 		}
 	}
 }

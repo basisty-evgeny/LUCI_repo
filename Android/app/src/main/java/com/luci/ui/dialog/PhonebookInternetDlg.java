@@ -44,8 +44,8 @@ public class PhonebookInternetDlg extends Dialog {
 
 		setContentView(R.layout.dialog_phonebook_internet);
 
-		til_url = findViewById(R.id.til_url);
-		edt_url = findViewById(R.id.edt_url);
+		til_url = (TextInputLayout) findViewById(R.id.til_url);
+		edt_url = (TextInputEditText) findViewById(R.id.edt_url);
 
 		findViewById(R.id.btn_ok).setOnClickListener(new View.OnClickListener() {
 			@Override

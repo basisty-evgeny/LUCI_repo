@@ -14,6 +14,11 @@ class ChannelModel extends Model
 
     }
 
+    public function is_true($val, $return_null=false){
+        $boolval = ( is_string($val) ? filter_var($val, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) : (bool) $val );
+        return ( $boolval===null && !$return_null ? false : $boolval );
+    }
+
     public function insertNewChannel($request) {
 
         $user = Auth::user();
@@ -21,7 +26,6 @@ class ChannelModel extends Model
         if ($user) {
             $user_id = $user->id;
             $channelName = $request->input('channel_name');
-
             $this->channel_name = $channelName;
             $this->user_id = $user_id;
             $this->protocol = $request->input("protocol");
@@ -30,7 +34,9 @@ class ChannelModel extends Model
             $this->dynamic_jitter_buffers = $request->input("dynamic_jitter_buffers");
             $this->format = $request->input("format");
             $this->bitrate = $request->input("bitrate");
-            $this->samplerate = $request->input("samplerates");
+            $this->samplerate = $request->input("samplerate");
+            $this->stereo = $this->is_true($request->input("stereo"));
+            $this->talk_mode = $this->is_true($request->input("talk_mode"));
             $now = date("Y-m-d H:i:s") ;
             $this->created_at = $now;
             $this->save();
@@ -46,7 +52,8 @@ class ChannelModel extends Model
         }
 
         $result = array(
-            'success' => false
+            'success' => false,
+            'reason'=>104,
         );
         return $result;
     }
@@ -69,7 +76,9 @@ class ChannelModel extends Model
                 $channel->dynamic_jitter_buffers = $request->input("dynamic_jitter_buffers");
                 $channel->format = $request->input("format");
                 $channel->bitrate = $request->input("bitrate");
-                $channel->samplerate = $request->input("samplerates");
+                $channel->samplerate = $request->input("samplerate");
+                $channel->stereo = $this->is_true($request->input("stereo"));
+                $channel->talk_mode = $this->is_true($request->input("talk_mode"));
                 $now = date("Y-m-d H:i:s") ;
                 $channel->updated_at = $now;
                 $channel->save();
@@ -83,11 +92,19 @@ class ChannelModel extends Model
                 return $result;
 
             }
+            else{
+                $result = array(
+                    'success' => false,
+                    'reason'=>105,
+                );
+                return $result;
+            }
 
         }
 
         $result = array(
-            'success' => false
+            'success' => false,
+            'reason'=>104,
         );
         return $result;
     }
@@ -109,10 +126,18 @@ class ChannelModel extends Model
                 );
                 return $result;
             }
+            else{
+                $result = array(
+                    'success' => false,
+                    'reason'=>105,
+                );
+                return $result;
+            }
         }
 
         $result = array(
-            'success' => false
+            'success' => false,
+            'reason'=>104,
         );
         return $result;
     }
@@ -131,18 +156,19 @@ class ChannelModel extends Model
                 ->get();
             $count = count($channels);
 
-            if ($count > 0) {
-                $result = array(
+            $result = array(
                     'success' => true,
                     'count'=> $count,
                     'channels' => $channels
-                );
-                return $result;
-            }
+            );
+            
+            return $result;
+            
         }
 
         $result = array(
-            'success' => false
+            'success' => false,
+            'reason'=>104,
         );
         return $result;
     }
