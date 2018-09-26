@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Luci</string>
+    <string name="app_name">ElletaBro</string>
 
     <string name="Activation_code">Activation code</string>
     <string name="Add_station">Add a station</string>
@@ -18,6 +18,13 @@
     <string name="General">General</string>
     <string name="General_">General:</string>
     <string name="Identity_">Identity:</string>
+    <string name="Icecast">Icecast</string>
+    <string name="Icecast_conf">Icecast configuration:</string>
+    <string name="Icecast_host">Server host url:</string>
+    <string name="Icecast_port">Server port:</string>
+    <string name="Icecast_mountpoint">Mountpoint name:</string>
+    <string name="Icecast_user">User:</string>
+    <string name="Icecast_password">Password:</string>
     <string name="IN">IN</string>
     <string name="invalid_activation_code_empty">Please input activation code</string>
     <string name="invalid_destination_empty">Please input destination</string>
@@ -80,7 +87,7 @@
 
     <string-array name="protocol_category">
         <item>RTP</item>
-        <item>SC-RTP</item>
+        <!-- <item>SC-RTP</item> -->
         <item>SIP</item>
         <item>SHOUTcast</item>
         <item>Icecast</item>

@@ -204,7 +204,7 @@ public class RegisterActivity extends BaseActivity implements
 //                            Toasty.error(instance, getString(R.string.register_fail), Toast.LENGTH_SHORT).show();
 //                        }
                     } catch (Exception e) {
-                        Toasty.error(instance, getString(R.string.response_parse_error), Toast.LENGTH_SHORT).show();
+                        Toasty.error(instance, getString(R.string.server_error), Toast.LENGTH_SHORT).show();
                         e.printStackTrace();
                     }
                 }

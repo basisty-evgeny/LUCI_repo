@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.loopj.android.http.RequestParams;
+import com.luci.AppPreferences;
 import com.luci.R;
 import com.luci.util.CommonUtil;
 import com.luci.util.Constant;
@@ -122,6 +123,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         Boolean status = object.getBoolean("success");
                         if (status) {
                             Toasty.success(instance, getString(R.string.login_success), Toast.LENGTH_SHORT).show();
+
+                            AppPreferences.KEY.LOGGED_IN = true;
 
                             if (SplashActivity.instance != null)
                                 SplashActivity.instance.finish();

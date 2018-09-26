@@ -8,6 +8,9 @@ public class AppPreferences {
 	public static class KEY {
 		// user selected channel id
 		public static int CURRENT_CHANNEL_ID = -1;
+		public static String CURRENT_CHANNEL_NAME = "";
+
+		public static boolean LOGGED_IN = false;
 
 		// sign in
 		public static final String ACTIVATED = "ACTIVATED";
@@ -22,8 +25,9 @@ public class AppPreferences {
 		instance = pref;
 
 		KEY.CURRENT_CHANNEL_ID = getInt("current_channel_id", -1);
+		KEY.CURRENT_CHANNEL_NAME = getStr("current_channel_name", "ECHO SERVER");
 	}
-	
+
 	// check contain
 	public static boolean contains(String key) {
 		return instance.contains(key);

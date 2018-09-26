@@ -205,6 +205,11 @@ public class ChooseStationActivity extends BaseActionBarActivity implements
 
                     AppPreferences.setInt("current_channel_id", station.id);
                     AppPreferences.KEY.CURRENT_CHANNEL_ID = station.id;
+
+                    AppPreferences.setStr("current_channel_name", station.name);
+                    AppPreferences.KEY.CURRENT_CHANNEL_NAME = station.name;
+
+                    MainActivity.instance.updateStationName();
                 }
 
                 onBackPressed();

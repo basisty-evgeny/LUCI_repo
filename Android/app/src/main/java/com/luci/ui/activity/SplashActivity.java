@@ -68,8 +68,8 @@ public class SplashActivity extends BaseActivity {
                     Intent intent;
 
                     if (firstuse) {
-                        intent = new Intent(instance, RegisterActivity.class);
-//                        intent = new Intent(instance, LoginActivity.class);
+//                        intent = new Intent(instance, RegisterActivity.class);
+                        intent = new Intent(instance, LoginActivity.class);
                     } else {
                         intent = new Intent(instance, LoginActivity.class);
                     }

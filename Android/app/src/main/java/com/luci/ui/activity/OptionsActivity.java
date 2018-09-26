@@ -11,6 +11,7 @@ import android.view.View;
 import com.luci.R;
 import com.luci.ui.fragment.OptionDefaultFragment;
 import com.luci.ui.fragment.OptionGeneralFragment;
+import com.luci.ui.fragment.OptionIcecastFragment;
 import com.luci.ui.fragment.OptionSipFragment;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class OptionsActivity extends BaseActionBarActivity implements
     OptionDefaultFragment mDefaultFrag;
     OptionSipFragment mSipFrag;
     OptionGeneralFragment mGeneralFrag;
+    OptionIcecastFragment mIcecastFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +39,13 @@ public class OptionsActivity extends BaseActionBarActivity implements
         mDefaultFrag = OptionDefaultFragment.newInstance();
         mSipFrag = OptionSipFragment.newInstance();
         mGeneralFrag = OptionGeneralFragment.newInstance();
+        mIcecastFrag = OptionIcecastFragment.newInstance();
 
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         pagerAdapter.addFragment(mDefaultFrag, getString(R.string.Defaults));
         pagerAdapter.addFragment(mSipFrag, getString(R.string.SIP));
         pagerAdapter.addFragment(mGeneralFrag, getString(R.string.General));
+        pagerAdapter.addFragment(mIcecastFrag, getString(R.string.Icecast));
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(pagerAdapter);
@@ -57,6 +61,7 @@ public class OptionsActivity extends BaseActionBarActivity implements
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_ok: {
+                mIcecastFrag.saveConfig();
                 onBackPressed();
             }
             break;

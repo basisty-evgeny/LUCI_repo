@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.jaygoo.widget.OnRangeChangedListener;
 import com.jaygoo.widget.RangeSeekBar;
+import com.luci.AppPreferences;
 import com.luci.Engine.MyMediaRecorder;
 import com.luci.R;
 import com.luci.util.Constant;
@@ -68,6 +69,8 @@ public class MainActivity extends BaseActivity implements
         txt_server = (TextView) findViewById(R.id.txt_server);
         img_start = (ImageView) findViewById(R.id.img_start);
         view_status = findViewById(R.id.view_status);
+
+        updateStationName();
 
         prog_background = (ImageView) findViewById(R.id.prog_background);
         prog_background.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
@@ -163,6 +166,13 @@ public class MainActivity extends BaseActivity implements
             }
         });
 
+    }
+
+    public void updateStationName() {
+        if (AppPreferences.KEY.LOGGED_IN)
+            txt_server.setText(AppPreferences.KEY.CURRENT_CHANNEL_NAME);
+        else
+            txt_server.setText("ECHO SERVER");
     }
 
     @Override

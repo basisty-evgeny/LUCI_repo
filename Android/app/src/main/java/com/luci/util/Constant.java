@@ -14,7 +14,8 @@ public class Constant {
     /**
      * api backend server configuration
      */
-    public static final String HOST = "http://192.168.2.43:8000";
+    public static final String HOST = "http://34.213.117.228:80";
+    //public static final String HOST = "http://192.168.2.43:8000";
     public static final String BASE_URL = "/";
     public static String getAPIBaseUrl() {
         return HOST + BASE_URL;
@@ -33,21 +34,21 @@ public class Constant {
     /**
      * Icecast host
      */
-    public static final String ICE_HOST    = "192.168.2.137";
+    public static String ICE_HOST    = "34.213.117.228";
 
     /**
      * Broadcast port that server listens incoming streams
      */
-    public static final int    ICE_PORT    = 8002;
+    public static int    ICE_PORT    = 8000;
 
     /**
      * Mount point of incoming source
      */
-    public static final String ICE_MOUNT   = "/mountpoint.ogg";
+    public static String ICE_MOUNT   = "/mountpoint.ogg";
 
     /**
      * Credentials
      */
-    public static final String ICE_USER    = "user1";
-    public static final String ICE_PASS    = "pass1";
+    public static String ICE_USER    = "user1";
+    public static String ICE_PASS    = "pass1";
 }
